@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="task"
+            type="com.suraj.roomdm3.db.Task" />
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="match_parent"
+        tools:context=".AddTaskActivity">
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="32dp"
+            android:textColorHint="@color/black"
+            android:hint="Task">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edtTaskName"
+                android:drawableTint="@color/black"
+                android:inputType="textPersonName"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="32dp"
+            android:textColorHint="@color/black"
+            android:hint="Priority">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edtTaskPriority"
+                android:drawableTint="@color/black"
+                android:inputType="textPersonName"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <CheckBox
+                android:id="@+id/chkIsComplete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Is Complete"
+                android:layout_margin="10dp" />
+
+            <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+                android:id="@+id/fabAddTask"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="32dp"
+                android:backgroundTint="?attr/colorPrimaryDark"
+                android:text="Add Task"
+                android:textColor="@color/white"
+                android:textSize="20dp" />
+
+
+            <TextView
+                android:id="@+id/txtCreateUserResponse"
+                android:textSize="20dp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_margin="5dp"
+                android:padding="2dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+    </LinearLayout>
+</layout>

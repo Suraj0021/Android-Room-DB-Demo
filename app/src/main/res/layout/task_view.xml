@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+<variable
+    name="task"
+    type="com.suraj.roomdm3.db.Task" />
+    </data>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:padding="10dp"
+        android:elevation="14dp">
+
+        <TextView
+            android:id="@+id/txtTask"
+            android:textSize="20dp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_margin="5dp"
+            android:text="Title : @{task.title}"
+            android:padding="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/txtPriority"
+            android:textSize="20dp"
+            android:layout_margin="5dp"
+            android:padding="5dp"
+            android:text="Priority Level : @{String.valueOf(task.priority)}"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/txtIsComplete"
+            android:textSize="20dp"
+            android:layout_margin="5dp"
+            android:padding="5dp"
+            android:text="Is Completed : @{String.valueOf(task.completed)}"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+
+    </LinearLayout>
+</layout>
